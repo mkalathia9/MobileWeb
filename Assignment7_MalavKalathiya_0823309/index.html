@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation Slider</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>MALAV</h1>
+    </header>
+
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+        
+            <div class="swiper-slide">
+                <form id="personalInfoForm" class="form-section">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="dob">Date of Birth:</label>
+                        <input type="date" id="dob" name="dob" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Gender:</label>
+                        <label for="genderMale"><input type="radio" id="genderMale" name="gender" value="male" required> Male</label>
+                        <label for="genderFemale"><input type="radio" id="genderFemale" name="gender" value="female" required> Female</label>
+                    </div>
+                    <button type="submit" class="submit-btn">Next</button>
+                </form>
+            </div>
+
+            
+            <div class="swiper-slide">
+                <form id="contactInfoForm" class="form-section">
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required oninvalid="this.setCustomValidity('Please enter a valid email')">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number:</label>
+                        <input type="tel" id="phone" name="phone" required pattern="^\d{3}-\d{3}-\d{4}$" oninvalid="this.setCustomValidity('Enter phone in format: 123-456-7890')">
+                    </div>
+                    <div class="form-group">
+                        <label for="address">Address:</label>
+                        <textarea id="address" name="address" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Next</button>
+                </form>
+            </div>
+
+            
+            <div class="swiper-slide">
+                <form id="paymentInfoForm" class="form-section">
+                    <div class="form-group">
+                        <label for="ccNumber">Credit Card Number:</label>
+                        <input type="text" id="ccNumber" name="ccNumber" required pattern="^\d{10}$" oninvalid="this.setCustomValidity('Please enter a valid 10-digit credit card number')">
+                    </div>
+                    <div class="form-group">
+                        <label for="expDate">Expiration Date:</label>
+                        <input type="date" id="expDate" name="expDate" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="cvv">CVV:</label>
+                        <input type="text" id="cvv" name="cvv" required pattern="^\d{3}$" oninvalid="this.setCustomValidity('Please enter a valid 3-digit CVV')">
+                    </div>
+                    <button type="submit" class="submit-btn">Submit</button>
+                </form>
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
