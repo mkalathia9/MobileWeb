@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <title>Fictional Store</title>
+</head>
+<body>
+
+  <div class="container-fluid">
+    <header class="text-center mt-4">
+      <h1>Malav Kalathiya</h1>
+    </header>
+
+    <section class="mt-4 d-sm-block d-md-none">
+      <div class="row">
+        <div class="col-lg-6 offset-lg-3 col-md-8 offset-md-2 col-sm-10 offset-sm-1">
+          <form>
+            <div class="form-group">
+                <div class="form-group">
+                    <label>Would you like to order</label>
+                    <div class="custom-control custom-switch">
+                      <input type="checkbox" class="custom-control-input" id="orderSwitch">
+                      <label class="custom-control-label" for="orderSwitch"></label>
+                </div>
+                <label for="productName">Product Name</label>
+                <select class="form-control" id="productName"></select>
+    
+                <option>Sony</option>
+                <option>Beats</option>
+                <option>Apple</option>
+              </select>
+            </div>
+           
+            </div>
+            <div class="form-group">
+              <label for="quantity">Quantity</label>
+              <input type="range" class="form-control-range" id="quantity" min="1" max="10">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+      </div>
+    </section>
+vv
+    <section class="mt-4">
+      <div class="row">
+        <div class="col-lg-6 offset-lg-3 col-md-8 offset-md-2 col-sm-10 offset-sm-1">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Product Name</th>
+                <th>Price</th>
+                <th>Quantity</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Sony</td>
+                <td>$199</td>
+                <td>10</td>
+              </tr>
+              <tr>
+                <td>Beats</td>
+                <td>$399</td>
+                <td>8</td>
+              </tr>
+              <tr>
+                <td>Apple</td>
+                <td>$799</td>
+                <td>5</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Image Section -->
+    <section class="mt-4">
+      <div class="row">
+        <div class="col-lg-6 offset-lg-3 col-md-8 offset-md-2 col-sm-10 offset-sm-1">
+          <img src="Product.jpeg" class="img-fluid rounded" alt="Electronic Product">
+          <p class="text-center mt-2">Premium Wireless Over-Ear Headphones</p>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>
