@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Malav Bank</title>
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+      <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+     
+     
+     <style>
+         @media (max-width: 576px) {
+         body { background-color: #e79fd5; }
+         }
+         @media (min-width: 577px) {
+         body { background-color: #e0ec9c; }
+         }
+         .swiper-button-next, .swiper-button-prev {
+         top: 50%;
+         }
+
+         .swiper-container {
+        position: relative; 
+    }
+
+    .swiper-button-next, .swiper-button-prev {
+        position: absolute;
+        top: 50%; 
+        transform: translateY(-50%); 
+    }
+    .swiper-button-next {
+        right: 10px; 
+    }
+    .swiper-button-prev {
+        left: 10px; 
+    }
+
+    
+    .swiper-slide {
+        padding-right: 30px; 
+        padding-left: 30px; 
+    }
+      </style>
+
+
+
+   </head>
+   <body>
+      <!-- Navigation Bar -->
+      <nav class="navbar navbar-expand-lg navbar-light bg-danger">
+         <a class="navbar-brand" href="#">
+         <img src="malav.jpg" width="30" height="30" alt="Bank Icon">
+         Malav Bank
+         </a>
+         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+         <span class="navbar-toggler-icon"></span>
+         </button>
+         <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+               <li class="nav-item active"><a class="nav-link" href="#">HOME</a></li>
+               <li class="nav-item"><a class="nav-link" href="#">SERVICES</a></li>
+               <li class="nav-item"><a class="nav-link" href="#">CONTACT US</a></li>
+            </ul>
+         </div>
+      </nav>
+
+
+
+
+      <!-- Main Content -->
+      <div class="container">
+         <h2 class="text-primary mt-4 mb-4">Malav Bank Website</h2>
+         <div class="row">
+            <!-- Savings Account -->
+            <div class="col-md-4">
+               <figure class="figure">
+                <img src="malav.jpg" class="figure-img img-fluid rounded" alt="Savings Account">               
+                  <figcaption class="figure-caption text-center">Savings Account</figcaption>
+                  <button type="button" class="btn btn-info btn-sm mb-2" data-toggle="popover" data-placement="bottom" title="Savings Account" data-content="Details about Savings Account.">Learn More</button>
+               </figure>
+            </div>
+            <!-- Checking Account -->
+            <div class="col-md-4">
+               <figure class="figure">
+                <img src="malav2.jpg" class="figure-img img-fluid rounded" alt="Checking Account">                  <figcaption class="figure-caption text-center">Checking Account</figcaption>
+                  <button type="button" class="btn btn-info btn-sm mb-2" data-toggle="popover" data-placement="bottom" title="Checking Account" data-content="Details about Checking Account.">Learn More</button>
+               </figure>
+            </div>
+            <!-- Business Account -->
+            <div class="col-md-4">
+               <figure class="figure">
+                  <img src="malav.jpg" class="figure-img img-fluid rounded" alt="Business Account">
+                  <figcaption class="figure-caption text-center">Business Account</figcaption>
+                  <button type="button" class="btn btn-info btn-sm mb-2" data-toggle="popover" data-placement="bottom" title="Business Account" data-content="Details about Business Account.">Learn More</button>
+               </figure>
+            </div>
+         </div>
+         <!-- Loan Information Section -->
+         <div class="swiper-container my-4">
+            <div class="swiper-wrapper">
+               <div class="swiper-slide">
+                  <h4>Home Loan Information</h4>
+                  <p>Details about Home Loan.</p>
+               </div>
+               <div class="swiper-slide">
+                  <h4>Car Loan Information</h4>
+                  <p>Details about Car Loan.</p>
+               </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+         </div>
+      </div>
+
+
+
+      <!-- Scripts -->
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+      <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+      <script>
+         document.addEventListener("DOMContentLoaded", function() {
+             var swiper = new Swiper('.swiper-container', {
+                 navigation: {
+                     nextEl: '.swiper-button-next',
+                     prevEl: '.swiper-button-prev',
+                 },
+             });
+         
+             $(function () {
+                 $('[data-toggle="popover"]').popover();
+             });
+         });
+      </script>
+
+
+
+   </body>
+</html>
